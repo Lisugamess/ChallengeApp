@@ -27,6 +27,7 @@
         public void AddScore(int number)
         {
             this.scoer.Add(number);
+            
         }
     }
 }
