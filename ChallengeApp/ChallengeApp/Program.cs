@@ -1,47 +1,36 @@
 ﻿using ChallengeApp;
 
-Employee employee1 = new Employee("Adam", "nowak", "33");
-Employee employee2 = new Employee("Tomasz", "nowak", "23");
-Employee employee3 = new Employee("Kacper", "nowak", "28");
+User user1 = new User("Adam", "nowak", "33");
+User user2 = new User("Tomasz", "nowak", "23");
 
 
-employee1.AddScore(5);
-employee1.AddScore(2);
-employee1.AddScore(7);
-employee1.AddScore(7);
-employee1.AddScore(3);
 
-employee2.AddScore(3);
-employee2.AddScore(8);
-employee2.AddScore(6);
-employee2.AddScore(3);
-employee2.AddScore(2);
+user1.AddScore(5);
+user1.AddScore(2);
+user1.AddScore(7);
 
-employee3.AddScore(9);
-employee3.AddScore(6);
-employee3.AddScore(1);
-employee3.AddScore(2);
-employee3.AddScore(7);
+user2.AddScore(3);
+user2.AddScore(8);
+user2.AddScore(6);
 
-List<Employee> employee = new List<Employee>()
+
+
+
+List<User> user = new List<User>()
 {
-    employee1, employee2, employee3
+    user1, user2, 
 };
 
 int maxResult = -1;
-Employee employeeWithMaxResult = null;
+User userWithMaxResult = null;
 
-foreach (var employe in employee)
+foreach (var User in user)
 {
-    if (employe.Rseult > maxResult)
+    if (User.Rseult > maxResult)
     {
-        employeeWithMaxResult = employe;
+        userWithMaxResult = User;
     }
 }
-Console.WriteLine("Najwyższą liczbą ocen ma : " + employeeWithMaxResult.Name);
-Console.WriteLine("Name:" + employeeWithMaxResult.Name);
-Console.WriteLine("Surname:" + employeeWithMaxResult.Surname);
-Console.WriteLine("Age:" + employeeWithMaxResult.Age);
-Console.WriteLine("Suma punktów: " + employeeWithMaxResult.Rseult);
-
-
+Console.WriteLine("Najwyższą liczbą ocen ma : " + userWithMaxResult.Login);
+Console.WriteLine("Name:" + userWithMaxResult.Login);
+Console.WriteLine("Suma punktów: " + userWithMaxResult.Rseult);

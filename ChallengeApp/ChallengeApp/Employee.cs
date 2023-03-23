@@ -1,20 +1,21 @@
 ﻿namespace ChallengeApp
 {
-    public class Employee
+    public class User
     {
         private List<int> scoer = new List<int>();
-        public Employee(string name, string surname, string age)
+        public User(string login)
         {
-            this.Name = name;
-            this.Surname = surname;
-            this.Age = age;
+            this.Login = login;
+        }
+        public User(string login, string password, string v)
+        {
+            this.Login = login;
+            this.Password = password ;
         }
 
-        public string Name { get; private set; }
+        public string Login { get; private set; }
 
-        public string Surname { get; private set; }
-
-        public string Age { get; private set; }
+        public string Password { get; private set; }
 
         public int Rseult
         {
