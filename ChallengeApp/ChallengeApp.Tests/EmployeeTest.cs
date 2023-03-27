@@ -32,13 +32,13 @@
         public void CheckStatisticAverage()
         {
             var employee = new Employee("Alan", "Nowak");
-            employee.AddGrade(7);
-            employee.AddGrade(3);
             employee.AddGrade(2);
+            employee.AddGrade(2);
+            employee.AddGrade(6);
 
             var statistic = employee.GetStatistics();
 
-            Assert.AreEqual(Math.Round(4.0d), Math.Round(statistic.Average));
+            Assert.AreEqual(Math.Round(3.33, 2), Math.Round(statistic.Average, 2));
         }
     }
 }
